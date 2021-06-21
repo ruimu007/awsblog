@@ -1,0 +1,17 @@
+echo '{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:GetBucketLocation",
+            "s3:PutObject",
+            "s3:DeleteObject"
+        ],
+        "Resource": [
+            "arn:aws:s3:::student1009-aws-hugo-1",
+            "arn:aws:s3:::student1009-aws-hugo-1/*”
+        ],
+        "Effect": "Allow"
+    }]
+}' > /tmp/role-policy.json
